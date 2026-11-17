@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f43">
+<title>Clinic Revenue Desk | Smart Clinic Management</title>
+<meta name="description" content="A smarter way to manage clinic operations, revenue, appointments, staff and inventory.">
+
+<style>
+:root {
+  --green:#173f43;
+  --green2:#24585a;
+  --gold:#b08a52;
+  --paper:#f7f8f6;
+  --ink:#203438;
+  --muted:#687779;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,sans-serif;
+  line-height:1.65;
+}
+a {text-decoration:none;color:inherit}
+header {
+  background:white;
+  padding:18px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #e7ece9;
+}
+.brand {font-size:20px;font-weight:800;color:var(--green)}
+.brand span {color:var(--gold)}
+nav {display:flex;gap:20px;align-items:center;font-size:14px}
+nav a:hover {color:var(--gold)}
+.btn {
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:7px;
+  font-weight:bold;
+  background:var(--gold);
+  color:white;
+}
+.btn.dark {background:var(--green)}
+.btn.outline {
+  border:1px solid #c8d2ce;
+  background:transparent;
+  color:var(--green);
+}
+.hero {
+  padding:85px 8%;
+  background:linear-gradient(120deg,#173f43,#24585a);
+  color:white;
+}
+.hero-inner {
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:45px;
+  align-items:center;
+}
+.eyebrow {
+  color:#dfc18f;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+}
+h1 {font-size:clamp(38px,6vw,64px);line-height:1.08;margin:18px 0}
+.hero p {font-size:18px;color:#e0e9e6;max-width:570px}
+.actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.preview {
+  background:white;
+  color:var(--ink);
+  border-radius:14px;
+  padding:25px;
+  box-shadow:0 20px 60px #102c2d55;
+}
+.preview small {color:var(--muted)}
+.preview h3 {margin:5px 0 20px}
+.stats {display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat {background:#f0f4f1;padding:15px;border-radius:9px}
+.stat strong {display:block;color:var(--green);font-size:21px}
+section {padding:75px 8%}
+.container {max-width:1100px;margin:auto}
+.section-label {
+  color:var(--gold);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+h2 {font-size:clamp(29px,4vw,42px);line-height:1.2;color:var(--green);margin:10px 0 18px}
+.intro {max-width:720px;color:var(--muted);font-size:17px}
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:32px;
+}
+.card {
+  background:white;
+  padding:25px;
+  border:1px solid #e7ece9;
+  border-radius:12px;
+}
+.number {color:var(--gold);font-weight:bold;font-size:13px}
+.card h3 {color:var(--green);margin:10px 0}
+.card p {color:var(--muted);font-size:15px;margin:0}
+.features {background:#edf2ee}
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:30px;
+}
+.feature {background:white;padding:20px;border-radius:10px}
+.feature strong {color:var(--green)}
+.feature p {color:var(--muted);margin:6px 0 0;font-size:14px}
+.audience {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:30px;
+}
+.download {
+  background:var(--green);
+  color:white;
+  text-align:center;
+  padding:75px 8%;
+}
+.download h2 {color:white}
+.download p {
+  color:#dce8e3;
+  max-width:650px;
+  margin:15px auto 25px;
+}
+.download .btn {margin:6px}
+footer {
+  padding:25px 8%;
+  background:#102f32;
+  color:#c9d8d4;
+  text-align:center;
+  font-size:13px;
+}
+@media(max-width:760px) {
+  header {padding:15px 5%;flex-wrap:wrap;gap:12px}
+  nav {width:100%;overflow-x:auto;gap:17px;padding-bottom:5px}
+  .hero-inner {grid-template-columns:1fr}
+  section {padding:55px 6%}
+  .hero {padding:65px 6%}
+  .cards,.audience {grid-template-columns:1fr}
+  .feature-grid {grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">CLINIC <span>REVENUE</span> DESK</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#challenges">Our Purpose</a>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">A smarter way to manage your clinic</div>
+      <h1>Bring your clinic's day into focus.</h1>
+      <p>One organized workspace for clinic operations, revenue, appointments, staff and inventory. Less confusion. Better visibility. More control.</p>
+      <div class="actions">
+        <a class="btn" href="#download">Get the Android App</a>
+        <a class="btn outline" style="color:white;border-color:#ffffff88" href="https://clinic-revenue-desk.onrender.com/login">Open Web App</a>
+      </div>
+    </div>
+
+    <div class="preview">
+      <small>CLINIC REVENUE DESK</small>
+      <h3>Your clinic. More organized.</h3>
+      <div class="stats">
+        <div class="stat"><small>Revenue visibility</small><strong>USD / LBP</strong></div>
+        <div class="stat"><small>Daily operations</small><strong>In one place</strong></div>
+        <div class="stat"><small>Team workflow</small><strong>Organized</strong></div>
+        <div class="stat"><small>Clinic resources</small><strong>Tracked</strong></div>
+      </div>
+      <p style="font-size:12px;color:#687779">Illustrative preview — not live clinic data.</p>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-label">Who we are</div>
+    <h2>Built around the realities of clinic management.</h2>
+    <p class="intro">Clinic Revenue Desk is a clinic operations and revenue management solution designed to bring essential daily activities into one structured workspace. Our goal is to help clinic owners and teams work with greater clarity, consistency and accountability.</p>
+  </div>
+</section>
+
+<section id="challenges" style="background:white">
+  <div class="container">
+    <div class="section-label">What we solve</div>
+    <h2>Less time managing confusion.</h2>
+    <p class="intro">Daily clinic management can become complicated when information is scattered across different records, conversations and spreadsheets.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="number">01 / VISIBILITY</div>
+        <h3>Scattered information</h3>
+        <p>Bring important operational information together instead of searching through disconnected records.</p>
+      </div>
+      <div class="card">
+        <div class="number">02 / FINANCES</div>
+        <h3>Unclear financial picture</h3>
+        <p>Improve visibility into revenue and financial activity, including USD and LBP tracking.</p>
+      </div>
+      <div class="card">
+        <div class="number">03 / OPERATIONS</div>
+        <h3>Daily disruptions</h3>
+        <p>Organize responsibilities, tasks and resources to help the team stay on track.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-label">What we offer</div>
+    <h2>Essential tools. One workspace.</h2>
+    <p class="intro">A practical set of tools designed to support the day-to-day running of a clinic.</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <strong>Appointments & Follow-ups</strong>
+        <p>Keep appointments and patient follow-up activities organized.</p>
+      </div>
+      <div class="feature">
+        <strong>Revenue Management</strong>
+        <p>Monitor financial activity with USD and LBP visibility.</p>
+      </div>
+      <div class="feature">
+        <strong>Staff & Tasks</strong>
+        <p>Organize team responsibilities and daily work.</p>
+      </div>
+      <div class="feature">
+        <strong>Inventory Management</strong>
+        <p>Keep track of clinic supplies and stock information.</p>
+      </div>
+      <div class="feature">
+        <strong>Requisitions</strong>
+        <p>Organize supply requests and internal resource needs.</p>
+      </div>
+      <div class="feature">
+        <strong>Alerts & Notifications</strong>
+        <p>Stay aware of important operational updates.</p>
+      </div>
+      <div class="feature">
+        <strong>Role-Based Access</strong>
+        <p>Support structured access for different team responsibilities.</p>
+      </div>
+      <div class="feature">
+        <strong>Centralized Information</strong>
+        <p>Bring essential clinic management activities into one workspace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Who it is for</div>
+    <h2>Designed for the whole clinic team.</h2>
+    <div class="audience">
+      <div class="card">
+        <h3>Clinic Owners</h3>
+        <p>Gain a clearer view of clinic performance, revenue and operations.</p>
+      </div>
+      <div class="card">
+        <h3>Managers</h3>
+        <p>Coordinate daily activities, staff responsibilities and resources.</p>
+      </div>
+      <div class="card">
+        <h3>Clinic Teams</h3>
+        <p>Work with more organized tasks, information and processes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="download">
+  <div class="container">
+    <div class="section-label">Get started</div>
+    <h2>Bring your clinic into focus.</h2>
+    <p>Discover Clinic Revenue Desk and explore a more organized approach to clinic management. Download the Android application or open the web app.</p>
+
+    <a class="btn" href="https://github.com/jimmyalkhoury/clinic-revenue-desk-downloads/releases/download/v1.0.0/app-release.apk">Download Android App</a>
+
+    <a class="btn" style="background:white;color:#173f43" href="https://clinic-revenue-desk.onrender.com/login">Open Web App</a>
+
+    <p style="font-size:12px;margin-top:22px">Android application download • Official release v1.0.0</p>
+  </div>
+</section>
+
+<footer>
+  <div><strong>CLINIC REVENUE DESK</strong></div>
+  <div>Smarter clinic operations. Better visibility. More control.</div>
+  <div style="margin-top:10px">© 2026 Clinic Revenue Desk. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
